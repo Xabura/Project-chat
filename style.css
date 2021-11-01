@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.3;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: hsl(270, 20%, 96%);
+    padding-block: 5rem;
+}
+
+.background{
+    width: 50%;
+    height: 30rem;
+    background-image: linear-gradient(to top right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-bottom-right-radius: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+@media (min-width: 800px) {
+    body{
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+    }
+    .background{
+        width: 35%;
+        height: 80%;
+        border-bottom-left-radius: 300px;
+        left: -10%;
+    }
+}
+
+main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 18rem;
+    background: white;
+    border-radius: 40px;
+    border: solid 10px white;
+    box-shadow: 0 0 20px -10px;
+}
+.cameraPlace{
+    background-color: white;
+    width: 50%;
+    height: 2rem;
+    position: absolute;
+    border-radius: 25px;
+    top: -.6rem;
+}
+
+.profile{
+    width: 100%;
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-left: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: white;
+}
+.profile h2{
+    cursor: pointer;
+}
+.profile p{
+    color: hsl(276, 100%, 81%);
+    font-size: 13px;
+}
+.profileName{
+    flex-grow: 1;
+}
+
+.profilePic{
+    border-radius: 50%;
+    border: solid white 2px;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.threeDots{
+    width: 1rem;
+    height: 1rem;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+/* chat */
+.chat{
+    background-color: hsl(270, 20%, 96%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+.chat > * {
+    margin-block: .3rem;
+    padding: .5rem;
+    font-size: 10px;
+}
+.chat p {
+    width: 65%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chat img{
+    width: 3rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+.dogPics{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    gap: .5rem;
+}
+
+.leftP{
+    background-color: hsla(293, 100%, 63%, 0.164);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+}
+.price{
+    background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .5rem;
+}
+.textA{
+    flex-grow: 1;
+}
+
+.cost {
+    font-size: 17px;
+    font-weight: 800;
+    flex-grow: .1;
+}
+
+.rightP{
+    background: white;
+    align-self: flex-end;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+}
+.radioLabel{
+    color: hsl(289, 100%, 72%);
+    width: 18px;
+    height: 18px;
+    border: solid 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkmark{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(289, 100%, 72%);
+    display: none;
+}
+.radio{
+    display: none;
+}
+.radio:checked + .checkmark{
+    display: inline-block;
+}
+
+
+.formDiv{
+    padding-inline: 0;
+    position: relative;
+}
+
+form input{
+    width: 100%;
+    padding: .8rem;
+    padding-inline: 1rem;
+    border: none;
+    border-radius: 20px;
+}
+
+form button{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: .8rem;
+    right: .5rem;
+    border-radius: 50%;
+    border: 0;
+    background-color: hsl(271, 36%, 24%);
+    color: white;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.botDiv{
+    padding-top: 3rem;
+    text-align: center;
+}
+.botDiv h1{
+    color: hsl(271, 36%, 24%);
+    padding-bottom: 1.5rem;
+}
+.attribution,
+.botDiv p{
+    margin-inline: auto;
+    width: 80%;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.7;
+}
+
+.attribution{
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+.attribution a,
+.attribution a:visited{
+    color: hsl(264, 100%, 61%);
+    text-decoration: none;
+}
+@media (min-width: 800px) {
+    .botSection{
+        width: 30%;
+        
+    }
+    .botSection *{
+        text-align: start;
+    }
+
+    .botDiv h1{
+        font-size: 35px;
+    }
+
+    .botDiv p {
+        margin-inline: 0;
+    }
+    .attribution{
+        margin-inline: 0;
+    }
+}
